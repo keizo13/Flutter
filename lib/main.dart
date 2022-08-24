@@ -58,7 +58,7 @@ class Login extends StatelessWidget {
                 decoration: const InputDecoration(
                   prefixIcon: Icon(
                     color: Color(0xff0062C8),
-                    Icons.account_circle,
+                    Icons.person,
                   ),
                   hintText: 'senha',
                 ),
