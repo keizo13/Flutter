@@ -126,12 +126,14 @@ class Login extends StatelessWidget {
                     ],
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 70),
-                  child: Image(
-                    image: AssetImage(
+                Padding(
+                  padding: const EdgeInsets.only(left: 40),
+                  child: IconButton(
+                    icon: Image.asset(
                       'assets/images/thrash.png',
                     ),
+                    iconSize: 50,
+                    onPressed: () {},
                   ),
                 ),
               ],
