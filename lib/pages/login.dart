@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:inicio/pages/bottommenu.dart';
-import 'package:inicio/pages/homepage.dart';
+import 'package:incontre/pages/bottommenu.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);

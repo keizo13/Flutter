@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:inicio/pages/change_password.dart';
-import 'package:inicio/pages/edit.dart';
-import 'package:inicio/pages/homepage2.dart';
-import 'package:inicio/pages/login.dart';
-import 'package:inicio/pages/splash.dart';
+import 'package:incontre/pages/change_password.dart';
+import 'package:incontre/pages/edit.dart';
+import 'package:incontre/pages/login.dart';
 
 class Config extends StatelessWidget {
   const Config({Key? key}) : super(key: key);
@@ -101,7 +99,9 @@ class Config extends StatelessWidget {
               child: const Text(
                 "Sair",
                 style: TextStyle(
-                  color: Color(0xff0062cb),
+                  color: Color(
+                    0xff0062cb,
+                  ),
                 ),
               ),
             ),
