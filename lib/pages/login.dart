@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:incontre/pages/bottom_menu.dart';
+import 'package:incontre/pages/widgets/widget_input.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -50,34 +51,11 @@ class Login extends StatelessWidget {
             const SizedBox(
               height: 100,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  prefixIcon: Icon(
-                    color: Color(0xff0062C8),
-                    Icons.person,
-                  ),
-                  hintText: 'e-mail',
-                ),
-              ),
-            ),
+            const InputEdit(title: "username", icon: Icons.person),
             const SizedBox(
               height: 40,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  prefixIcon: Icon(
-                    color: Color(0xff0062C8),
-                    Icons.lock,
-                  ),
-                  hintText: 'senha',
-                ),
-                obscureText: true,
-              ),
-            ),
+            const InputEdit(title: "senha", icon: Icons.lock),
             const SizedBox(
               height: 30,
             ),

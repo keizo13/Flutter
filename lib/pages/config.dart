@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:incontre/pages/change_password.dart';
 import 'package:incontre/pages/edit.dart';
 import 'package:incontre/pages/login.dart';
+import 'package:incontre/pages/widgets/widget_appbar.dart';
 
 class Config extends StatelessWidget {
   const Config({Key? key}) : super(key: key);
@@ -9,20 +10,8 @@ class Config extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(
-          0xff0154AD,
-        ),
-        leading: const BackButton(
-          color: Colors.white,
-        ),
-        title: const Text(
-          "Configurações",
-          style: TextStyle(
-            fontSize: 18,
-          ),
-        ),
-        centerTitle: true,
+      appBar: const AppbarEdit(
+        title: "Configurações",
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

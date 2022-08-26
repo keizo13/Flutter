@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:incontre/pages/widgets/widget_appbar.dart';
+import 'package:incontre/pages/widgets/widget_buttom.dart';
+import 'package:incontre/pages/widgets/widget_input.dart';
 
 class Edit extends StatelessWidget {
   const Edit({Key? key}) : super(key: key);
@@ -6,20 +9,8 @@ class Edit extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(
-          0xff0154AD,
-        ),
-        leading: const BackButton(
-          color: Colors.white,
-        ),
-        title: const Text(
-          "Alterar dados da conta",
-          style: TextStyle(
-            fontSize: 18,
-          ),
-        ),
-        centerTitle: true,
+      appBar: const AppbarEdit(
+        title: "Alterar dados da conta",
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -27,33 +18,15 @@ class Edit extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  prefixIcon: Icon(
-                    color: Color(0xff0062C8),
-                    Icons.person,
-                  ),
-                  hintText: 'Andrius Rocha Lazarino',
-                ),
-              ),
+            const InputEdit(
+              title: "Andrius Rocha Lazarino",
+              icon: Icons.person,
             ),
             const SizedBox(
               height: 10,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  prefixIcon: Icon(
-                    color: Color(0xff0062C8),
-                    Icons.email_outlined,
-                  ),
-                  hintText: 'andrius@email.com',
-                ),
-              ),
-            ),
+            const InputEdit(
+                title: "andrius@email.com", icon: Icons.email_outlined),
             const SizedBox(
               height: 10,
             ),
@@ -62,32 +35,9 @@ class Edit extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 10),
-              child: Material(
-                elevation: 10,
-                borderRadius: BorderRadius.circular(8),
-                color: const Color(0xff0154AD),
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width,
-                  child: InkWell(
-                    onTap: (() => {}),
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Text(
-                            'Atualizar',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontSize: 20,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
+              child: ButtomEdit(
+                title: "Atualizar",
+                ontap: () {},
               ),
             ),
           ],

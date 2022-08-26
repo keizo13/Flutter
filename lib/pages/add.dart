@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:incontre/pages/widgets/widget_buttom.dart';
+import 'package:incontre/pages/widgets/widget_appbar.dart';
+import 'package:incontre/pages/widgets/widget_input.dart';
 
 class Add extends StatelessWidget {
   const Add({Key? key}) : super(key: key);
@@ -6,20 +9,8 @@ class Add extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(
-          0xff0154AD,
-        ),
-        leading: const BackButton(
-          color: Colors.white,
-        ),
-        title: const Text(
-          "Adicionar",
-          style: TextStyle(
-            fontSize: 18,
-          ),
-        ),
-        centerTitle: true,
+      appBar: const AppbarEdit(
+        title: "Adicionar",
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -27,64 +18,20 @@ class Add extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  prefixIcon: Icon(
-                    color: Color(0xff0062C8),
-                    Icons.person,
-                  ),
-                  hintText: 'Nome',
-                ),
-              ),
+            const InputEdit(title: "Nome", icon: Icons.person),
+            const SizedBox(
+              height: 10,
             ),
+            const InputEdit(title: "E-mail", icon: Icons.email_outlined),
             const SizedBox(
               height: 10,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  prefixIcon: Icon(
-                    color: Color(0xff0062C8),
-                    Icons.email_outlined,
-                  ),
-                  hintText: 'E-mail',
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 10),
-              child: Material(
-                elevation: 10,
-                borderRadius: BorderRadius.circular(8),
-                color: const Color(0xff0154AD),
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width,
-                  child: InkWell(
-                    onTap: (() => {}),
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Text(
-                            'Adicionar',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontSize: 20,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 70, vertical: 200),
+              child: ButtomEdit(
+                title: 'Adicionar',
+                ontap: () {},
               ),
             ),
           ],

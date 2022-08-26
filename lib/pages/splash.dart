@@ -12,13 +12,16 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     super.initState();
-    _navigatetohome();
+    _navigateToHome();
   }
 
-  _navigatetohome() async {
+  _navigateToHome() async {
     await Future.delayed(const Duration(milliseconds: 2000), () {});
+    if (!mounted) {
+      return;
+    }
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => Login()));
+        context, MaterialPageRoute(builder: (context) => const Login()));
   }
 
   @override
