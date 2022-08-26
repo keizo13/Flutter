@@ -50,7 +50,7 @@ class Edit extends StatelessWidget {
                     color: Color(0xff0062C8),
                     Icons.email_outlined,
                   ),
-                  hintText: 'andrius@email.coml',
+                  hintText: 'andrius@email.com',
                 ),
               ),
             ),
