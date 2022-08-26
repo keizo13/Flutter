@@ -1,6 +1,6 @@
 {
-    "name": "incontre",
-    "short_name": "incontre",
+    "name": "first",
+    "short_name": "first",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

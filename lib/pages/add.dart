@@ -58,21 +58,6 @@ class Add extends StatelessWidget {
               height: 10,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  prefixIcon: Icon(
-                    color: Color(0xff0062C8),
-                    Icons.alternate_email,
-                  ),
-                  hintText: 'Tag',
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 150,
-            ),
-            Padding(
               padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 10),
               child: Material(
                 elevation: 10,
