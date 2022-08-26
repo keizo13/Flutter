@@ -57,18 +57,6 @@ class Edit extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  prefixIcon: Icon(
-                    color: Color(0xff0062C8),
-                    Icons.alternate_email,
-                  ),
-                  hintText: 'andrius',
-                ),
-              ),
-            ),
             const SizedBox(
               height: 150,
             ),
