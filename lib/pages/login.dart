@@ -75,6 +75,7 @@ class Login extends StatelessWidget {
                   ),
                   hintText: 'senha',
                 ),
+                obscureText: true,
               ),
             ),
             const SizedBox(

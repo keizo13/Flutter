@@ -37,6 +37,7 @@ class ChangePassword extends StatelessWidget {
                   ),
                   hintText: 'senha',
                 ),
+                obscureText: true,
               ),
             ),
             const SizedBox(
@@ -52,6 +53,7 @@ class ChangePassword extends StatelessWidget {
                   ),
                   hintText: 'nova senha',
                 ),
+                obscureText: true,
               ),
             ),
             const SizedBox(
@@ -67,6 +69,7 @@ class ChangePassword extends StatelessWidget {
                   ),
                   hintText: 'confirmação de senha',
                 ),
+                obscureText: true,
               ),
             ),
             const SizedBox(
