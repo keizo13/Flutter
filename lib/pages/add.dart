@@ -1,21 +1,7 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Login(),
-    );
-  }
-}
-
-class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
+class Add extends StatelessWidget {
+  const Add({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +14,7 @@ class Login extends StatelessWidget {
           color: Colors.white,
         ),
         title: const Text(
-          "Alterar dados da conta",
+          "Adicionar",
           style: TextStyle(
             fontSize: 18,
           ),

@@ -1,42 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:incontre/pages/add.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class Homepage extends StatefulWidget {
+  const Homepage({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Login(),
-    );
-  }
+  State<Homepage> createState() => _HomepageState();
 }
 
-class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
-
+class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
-        items: const [
-          BottomNavigationBarItem(
-              backgroundColor: Color(0xff0062C8),
-              icon: Icon(
-                Icons.home,
-              ),
-              label: "Início"),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.person,
-              ),
-              label: "Configurações"),
-        ],
-      ),
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: const Color(0xff0154AD),
@@ -58,7 +33,13 @@ class Login extends StatelessWidget {
               child: SizedBox(
                 width: MediaQuery.of(context).size.width,
                 child: InkWell(
-                  onTap: (() => {}),
+                  onTap: (() => {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => Add(),
+                          ),
+                        ),
+                      }),
                   child: Padding(
                     padding: const EdgeInsets.all(25),
                     child: Row(

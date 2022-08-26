@@ -1,49 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:incontre/pages/change_password.dart';
+import 'package:incontre/pages/edit.dart';
+import 'package:incontre/pages/login.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Login(),
-    );
-  }
-}
-
-class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
+class Config extends StatelessWidget {
+  const Config({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: Theme(
-        data: ThemeData(
-          canvasColor: const Color(
-            0xffFFFFFF,
-          ),
-        ),
-        child: BottomNavigationBar(
-          currentIndex: 0,
-          items: const [
-            BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.home,
-                ),
-                label: "Início"),
-            BottomNavigationBarItem(
-                backgroundColor: Color(0xff0062C8),
-                icon: Icon(
-                  Icons.person,
-                ),
-                label: "Configurações"),
-          ],
-        ),
-      ),
       appBar: AppBar(
         backgroundColor: const Color(
           0xff0154AD,
@@ -80,7 +45,13 @@ class Login extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const Edit(),
+                  ),
+                );
+              },
               child: const Text(
                 "Alterar dados da conta",
                 style: TextStyle(
@@ -96,7 +67,13 @@ class Login extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const ChangePassword(),
+                  ),
+                );
+              },
               child: const Text(
                 "Alterar Senha",
                 style: TextStyle(
@@ -112,11 +89,19 @@ class Login extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 10),
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const Login(),
+                  ),
+                );
+              },
               child: const Text(
                 "Sair",
                 style: TextStyle(
-                  color: Color(0xff0062cb),
+                  color: Color(
+                    0xff0062cb,
+                  ),
                 ),
               ),
             ),
