@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class PerfilEdit extends StatelessWidget {
   final String title;
-  final String? name;
-  const PerfilEdit({Key? key, required this.title, this.name})
+  final String route;
+  const PerfilEdit({Key? key, required this.title, required this.route})
       : super(key: key);
 
   @override
@@ -12,10 +12,9 @@ class PerfilEdit extends StatelessWidget {
       padding: const EdgeInsets.only(left: 20),
       child: TextButton(
         onPressed: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => const name(),
-            ),
+          Navigator.pushNamed(
+            context,
+            route,
           );
         },
         child: Text(

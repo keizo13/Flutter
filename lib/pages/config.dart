@@ -3,6 +3,7 @@ import 'package:incontre/pages/change_password.dart';
 import 'package:incontre/pages/edit.dart';
 import 'package:incontre/pages/login.dart';
 import 'package:incontre/pages/widgets/widget_appbar.dart';
+import 'package:incontre/pages/widgets/widget_perfil.dart';
 
 class Config extends StatelessWidget {
   const Config({Key? key}) : super(key: key);
@@ -31,70 +32,17 @@ class Config extends StatelessWidget {
             thickness: 1,
             color: Colors.black.withOpacity(0.2),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20),
-            child: TextButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const Edit(),
-                  ),
-                );
-              },
-              child: const Text(
-                "Alterar dados da conta",
-                style: TextStyle(
-                  color: Color(0xff0062cb),
-                ),
-              ),
-            ),
-          ),
+          const PerfilEdit(title: 'Alterar dados da conta', route: '/edit'),
           Divider(
             thickness: 1,
             color: Colors.black.withOpacity(0.2),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20),
-            child: TextButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const ChangePassword(),
-                  ),
-                );
-              },
-              child: const Text(
-                "Alterar Senha",
-                style: TextStyle(
-                  color: Color(0xff0062cb),
-                ),
-              ),
-            ),
-          ),
+          const PerfilEdit(title: 'Alterar senha', route: '/password'),
           Divider(
             thickness: 1,
             color: Colors.black.withOpacity(0.2),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 10),
-            child: TextButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const Login(),
-                  ),
-                );
-              },
-              child: const Text(
-                "Sair",
-                style: TextStyle(
-                  color: Color(
-                    0xff0062cb,
-                  ),
-                ),
-              ),
-            ),
-          ),
+          const PerfilEdit(title: 'Sair', route: '/login'),
         ],
       ),
     );
