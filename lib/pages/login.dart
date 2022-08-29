@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:incontre/pages/bottom_menu.dart';
 import 'package:incontre/pages/widgets/widget_input.dart';
 
 class Login extends StatelessWidget {

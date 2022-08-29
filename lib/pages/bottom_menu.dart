@@ -22,19 +22,23 @@ class _HomepageState extends State<BottomMenu> {
       body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
-        onTap: (index) => setState(() => currentIndex = index),
+        onTap: (index) => setState(
+          () => currentIndex = index,
+        ),
         items: const [
           BottomNavigationBarItem(
-              backgroundColor: Color(0xff0062C8),
-              icon: Icon(
-                Icons.home,
-              ),
-              label: "Início"),
+            backgroundColor: Color(0xff0062C8),
+            icon: Icon(
+              Icons.home,
+            ),
+            label: "Início",
+          ),
           BottomNavigationBarItem(
-              icon: Icon(
-                Icons.person,
-              ),
-              label: "Configurações"),
+            icon: Icon(
+              Icons.person,
+            ),
+            label: "Configurações",
+          ),
         ],
       ),
     );

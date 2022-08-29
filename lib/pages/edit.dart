@@ -25,7 +25,10 @@ class Edit extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            const Input(title: "andrius@email.com", icon: Icons.email_outlined),
+            const Input(
+              title: "andrius@email.com",
+              icon: Icons.email_outlined,
+            ),
             const SizedBox(
               height: 10,
             ),
@@ -33,7 +36,10 @@ class Edit extends StatelessWidget {
               height: 150,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 10),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 70,
+                vertical: 10,
+              ),
               child: Buttom(
                 title: "Atualizar",
                 ontap: () {},

@@ -18,17 +18,25 @@ class Add extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
-            const Input(title: "Nome", icon: Icons.person),
+            const Input(
+              title: "Nome",
+              icon: Icons.person,
+            ),
             const SizedBox(
               height: 10,
             ),
-            const Input(title: "E-mail", icon: Icons.email_outlined),
+            const Input(
+              title: "E-mail",
+              icon: Icons.email_outlined,
+            ),
             const SizedBox(
               height: 10,
             ),
             Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 70, vertical: 200),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 70,
+                vertical: 200,
+              ),
               child: Buttom(
                 title: 'Adicionar',
                 ontap: () {},

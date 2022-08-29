@@ -14,29 +14,36 @@ class Config extends StatelessWidget {
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Padding(
-            padding: EdgeInsets.fromLTRB(25, 25, 0, 5),
+        children: const [
+          Padding(
+            padding: EdgeInsets.fromLTRB(
+              25,
+              25,
+              0,
+              5,
+            ),
             child: Text(
               "Minha Conta",
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
-                color: Color(0xff0062cb),
+                color: Color(
+                  0xff0062cb,
+                ),
               ),
             ),
           ),
-          const AppDivider(),
+          AppDivider(),
           EditProfile(
             title: 'Alterar dados da conta',
             route: '/edit',
           ),
-          const AppDivider(),
+          AppDivider(),
           EditProfile(
             title: 'Alterar senha',
             route: '/password',
           ),
-          const AppDivider(),
+          AppDivider(),
           EditProfile(
             title: 'Sair',
             route: '/login',
