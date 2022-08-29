@@ -13,7 +13,7 @@ class Login extends StatelessWidget {
           onTap: () {
             Navigator.pushNamed(
               context,
-              '/config',
+              '/home',
             );
           },
           child: const SizedBox(
