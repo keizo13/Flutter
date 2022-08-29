@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:incontre/pages/add.dart';
+import 'package:incontre/pages/bottom_menu.dart';
 import 'package:incontre/pages/change_password.dart';
 import 'package:incontre/pages/config.dart';
 import 'package:incontre/pages/edit.dart';
@@ -14,7 +15,7 @@ void main() {
       initialRoute: '/',
       routes: {
         '/': (context) => const Splash(),
-        '/home': (context) => const Homepage(),
+        '/home': (context) => const BottomMenu(),
         '/login': (context) => const Login(),
         '/edit': (context) => const Edit(),
         '/config': (context) => const Config(),

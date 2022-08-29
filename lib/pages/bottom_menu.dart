@@ -6,10 +6,10 @@ class BottomMenu extends StatefulWidget {
   const BottomMenu({Key? key}) : super(key: key);
 
   @override
-  State<BottomMenu> createState() => _HomepageState();
+  State<BottomMenu> createState() => _BottomMenuState();
 }
 
-class _HomepageState extends State<BottomMenu> {
+class _BottomMenuState extends State<BottomMenu> {
   int currentIndex = 0;
   final screens = [
     const Homepage(),
