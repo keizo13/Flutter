@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class AppbarEdit extends StatelessWidget implements PreferredSizeWidget {
+class AppBarEdit extends StatelessWidget implements PreferredSizeWidget {
   final String title;
-  const AppbarEdit({Key? key, required this.title}) : super(key: key);
+  const AppBarEdit({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

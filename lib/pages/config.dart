@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:incontre/pages/widgets/widget_appbar.dart';
+import 'package:incontre/pages/widgets/widget_divider.dart';
 import 'package:incontre/pages/widgets/widget_perfil.dart';
 
 class Config extends StatelessWidget {
@@ -8,7 +9,7 @@ class Config extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppbarEdit(
+      appBar: const AppBarEdit(
         title: "Configurações",
       ),
       body: Column(
@@ -25,21 +26,21 @@ class Config extends StatelessWidget {
               ),
             ),
           ),
-          Divider(
-            thickness: 1,
-            color: Colors.black.withOpacity(0.2),
+          const AppDivider(),
+          EditProfile(
+            title: 'Alterar dados da conta',
+            route: '/edit',
           ),
-          const PerfilEdit(title: 'Alterar dados da conta', route: '/edit'),
-          Divider(
-            thickness: 1,
-            color: Colors.black.withOpacity(0.2),
+          const AppDivider(),
+          EditProfile(
+            title: 'Alterar senha',
+            route: '/password',
           ),
-          const PerfilEdit(title: 'Alterar senha', route: '/password'),
-          Divider(
-            thickness: 1,
-            color: Colors.black.withOpacity(0.2),
+          const AppDivider(),
+          EditProfile(
+            title: 'Sair',
+            route: '/login',
           ),
-          const PerfilEdit(title: 'Sair', route: '/login'),
         ],
       ),
     );

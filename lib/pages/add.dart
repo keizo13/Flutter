@@ -9,7 +9,7 @@ class Add extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppbarEdit(
+      appBar: const AppBarEdit(
         title: "Adicionar",
       ),
       body: SingleChildScrollView(
@@ -18,18 +18,18 @@ class Add extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
-            const InputEdit(title: "Nome", icon: Icons.person),
+            const Input(title: "Nome", icon: Icons.person),
             const SizedBox(
               height: 10,
             ),
-            const InputEdit(title: "E-mail", icon: Icons.email_outlined),
+            const Input(title: "E-mail", icon: Icons.email_outlined),
             const SizedBox(
               height: 10,
             ),
             Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 70, vertical: 200),
-              child: ButtomEdit(
+              child: Buttom(
                 title: 'Adicionar',
                 ontap: () {},
               ),

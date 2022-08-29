@@ -9,7 +9,7 @@ class Edit extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppbarEdit(
+      appBar: const AppBarEdit(
         title: "Alterar dados da conta",
       ),
       body: SingleChildScrollView(
@@ -18,15 +18,14 @@ class Edit extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
-            const InputEdit(
+            const Input(
               title: "Andrius Rocha Lazarino",
               icon: Icons.person,
             ),
             const SizedBox(
               height: 10,
             ),
-            const InputEdit(
-                title: "andrius@email.com", icon: Icons.email_outlined),
+            const Input(title: "andrius@email.com", icon: Icons.email_outlined),
             const SizedBox(
               height: 10,
             ),
@@ -35,7 +34,7 @@ class Edit extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 10),
-              child: ButtomEdit(
+              child: Buttom(
                 title: "Atualizar",
                 ontap: () {},
               ),

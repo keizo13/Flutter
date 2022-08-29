@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:incontre/pages/add.dart';
+import 'package:incontre/pages/widgets/widget_list.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -34,10 +35,9 @@ class _HomepageState extends State<Homepage> {
                 width: MediaQuery.of(context).size.width,
                 child: InkWell(
                   onTap: (() => {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => const Add(),
-                          ),
+                        Navigator.pushNamed(
+                          context,
+                          '/add',
                         ),
                       }),
                   child: Padding(
@@ -77,48 +77,17 @@ class _HomepageState extends State<Homepage> {
             child: Text(
               "Lista de Usuários",
               style: TextStyle(
-                  color: Color(
-                    0xff0154AD,
-                  ),
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold),
+                color: Color(
+                  0xff0154AD,
+                ),
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25),
-            child: Row(
-              children: [
-                const Image(
-                  image: AssetImage(
-                    'assets/images/person.png',
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text(
-                        "Antonio Chaves",
-                      ),
-                      Text(
-                        "antonio@email.com",
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 40),
-                  child: IconButton(
-                    icon: Image.asset(
-                      'assets/images/thrash.png',
-                    ),
-                    iconSize: 50,
-                    onPressed: () {},
-                  ),
-                ),
-              ],
-            ),
+          const UserList(
+            name: 'Antônio Chaves',
+            email: 'antonio@email.com',
           ),
           Divider(
             thickness: 1,

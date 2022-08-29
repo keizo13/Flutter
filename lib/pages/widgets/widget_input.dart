@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
-class InputEdit extends StatelessWidget {
+class Input extends StatelessWidget {
   final String title;
   final IconData icon;
-  const InputEdit({Key? key, required this.title, required this.icon})
-      : super(key: key);
+  const Input({
+    Key? key,
+    required this.title,
+    required this.icon,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +18,6 @@ class InputEdit extends StatelessWidget {
           prefixIcon: Icon(
             color: const Color(0xff0062C8),
             icon,
-            // Icons.person,
           ),
           hintText: title,
         ),

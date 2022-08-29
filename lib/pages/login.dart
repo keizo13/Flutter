@@ -12,10 +12,9 @@ class Login extends StatelessWidget {
         color: const Color(0xff0062C8),
         child: InkWell(
           onTap: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => const BottomMenu(),
-              ),
+            Navigator.pushNamed(
+              context,
+              '/config',
             );
           },
           child: const SizedBox(
@@ -51,11 +50,17 @@ class Login extends StatelessWidget {
             const SizedBox(
               height: 100,
             ),
-            const InputEdit(title: "username", icon: Icons.person),
+            const Input(
+              title: "username",
+              icon: Icons.person,
+            ),
             const SizedBox(
               height: 40,
             ),
-            const InputEdit(title: "senha", icon: Icons.lock),
+            const Input(
+              title: "senha",
+              icon: Icons.lock,
+            ),
             const SizedBox(
               height: 30,
             ),
