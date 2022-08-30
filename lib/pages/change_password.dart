@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:incontre/pages/widgets/widget_appbar.dart';
-import 'package:incontre/pages/widgets/widget_buttom.dart';
+import 'package:incontre/pages/widgets/widget_button.dart';
 import 'package:incontre/pages/widgets/widget_input.dart';
 
 class ChangePassword extends StatelessWidget {
@@ -9,7 +9,7 @@ class ChangePassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarEdit(
+      appBar: const AppBarWidget(
         title: "Alterar senha",
       ),
       body: SingleChildScrollView(
@@ -44,7 +44,7 @@ class ChangePassword extends StatelessWidget {
                 horizontal: 70,
                 vertical: 10,
               ),
-              child: Buttom(
+              child: ButtonWidget(
                 title: "Atualizar",
                 ontap: () {},
               ),
