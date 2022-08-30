@@ -21,6 +21,7 @@ class ChangePassword extends StatelessWidget {
             const Input(
               title: "senha",
               icon: Icons.lock,
+              obscure: true,
             ),
             const SizedBox(
               height: 10,
@@ -28,6 +29,7 @@ class ChangePassword extends StatelessWidget {
             const Input(
               title: "nova senha",
               icon: Icons.lock,
+              obscure: true,
             ),
             const SizedBox(
               height: 10,
@@ -35,6 +37,7 @@ class ChangePassword extends StatelessWidget {
             const Input(
               title: "confirmação nova senha",
               icon: Icons.lock,
+              obscure: true,
             ),
             const SizedBox(
               height: 150,

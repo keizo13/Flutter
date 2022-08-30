@@ -1,20 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:incontre/pages/widgets/widget_input.dart';
 
-class Login extends StatelessWidget {
+import '../utils/custom_dio.dart';
+
+class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
 
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  var email = "";
+  var password = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: Material(
         color: const Color(0xff0062C8),
         child: InkWell(
-          onTap: () {
-            Navigator.pushNamed(
-              context,
-              '/home',
-            );
+          onTap: () async {
+            final isLogged = await getHttp(email, password);
+            if (!mounted) {
+              return;
+            }
+            if (isLogged) {
+              Navigator.pushNamed(context, '/home');
+            }
           },
           child: const SizedBox(
             height: kToolbarHeight,
@@ -49,16 +61,27 @@ class Login extends StatelessWidget {
             const SizedBox(
               height: 100,
             ),
-            const Input(
+            Input(
               title: "username",
               icon: Icons.person,
+              onchanged: (value) {
+                setState(() {
+                  email = value;
+                });
+              },
             ),
             const SizedBox(
               height: 40,
             ),
-            const Input(
+            Input(
+              obscure: true,
               title: "senha",
               icon: Icons.lock,
+              onchanged: (value) {
+                setState(() {
+                  password = value;
+                });
+              },
             ),
             const SizedBox(
               height: 30,
