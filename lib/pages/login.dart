@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:incontre/pages/widgets/widget_input.dart';
-import 'package:incontre/utils/custom_dio.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -12,7 +11,10 @@ class Login extends StatelessWidget {
         color: const Color(0xff0062C8),
         child: InkWell(
           onTap: () {
-            getHttp("may@gmail.com", "123456");
+            Navigator.pushNamed(
+              context,
+              '/home',
+            );
           },
           child: const SizedBox(
             height: kToolbarHeight,

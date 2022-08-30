@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class UserList extends StatelessWidget {
+class UserWidget extends StatelessWidget {
   final String name;
   final String email;
-  const UserList({
+  const UserWidget({
     Key? key,
     required this.name,
     required this.email,
@@ -12,37 +12,38 @@ class UserList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 25),
+      padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const Image(
             image: AssetImage(
               'assets/images/person.png',
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  name,
-                ),
-                Text(
-                  email,
-                ),
-              ],
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    name,
+                  ),
+                  Text(
+                    email,
+                  ),
+                ],
+              ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 40),
-            child: IconButton(
-              icon: Image.asset(
-                'assets/images/thrash.png',
-              ),
-              iconSize: 50,
-              onPressed: () {},
+          IconButton(
+            icon: Image.asset(
+              'assets/images/thrash.png',
             ),
+            iconSize: 50,
+            onPressed: () {},
           ),
         ],
       ),

@@ -82,11 +82,22 @@ class _HomepageState extends State<Homepage> {
               ),
             ),
           ),
-          const User(
-            name: 'Antônio Chaves',
-            email: 'antonio@email.com',
+          Expanded(
+            child: ListView.builder(
+                padding: const EdgeInsets.all(8),
+                itemCount: 3,
+                itemBuilder: (BuildContext context, int index) {
+                  return Column(
+                    children: const [
+                      UserWidget(
+                        name: 'Antônio Chaves',
+                        email: 'antonio@email.com',
+                      ),
+                      DividerWidget(),
+                    ],
+                  );
+                }),
           ),
-          const DividerWidget(),
         ],
       ),
     );
