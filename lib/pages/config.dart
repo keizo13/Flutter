@@ -9,7 +9,7 @@ class Config extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarEdit(
+      appBar: const AppBarWidget(
         title: "Configurações",
       ),
       body: Column(
@@ -20,7 +20,7 @@ class Config extends StatelessWidget {
               25,
               25,
               0,
-              5,
+              05,
             ),
             child: Text(
               "Minha Conta",
@@ -33,17 +33,17 @@ class Config extends StatelessWidget {
               ),
             ),
           ),
-          AppDivider(),
+          Divider(),
           EditProfile(
             title: 'Alterar dados da conta',
             route: '/edit',
           ),
-          AppDivider(),
+          DividerWidget(),
           EditProfile(
             title: 'Alterar senha',
             route: '/password',
           ),
-          AppDivider(),
+          DividerWidget(),
           EditProfile(
             title: 'Sair',
             route: '/login',

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:incontre/pages/widgets/widget_appbar.dart';
-import 'package:incontre/pages/widgets/widget_buttom.dart';
+import 'package:incontre/pages/widgets/widget_button.dart';
 import 'package:incontre/pages/widgets/widget_input.dart';
 
 class Edit extends StatelessWidget {
@@ -9,7 +9,7 @@ class Edit extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarEdit(
+      appBar: const AppBarWidget(
         title: "Alterar dados da conta",
       ),
       body: SingleChildScrollView(
@@ -40,7 +40,7 @@ class Edit extends StatelessWidget {
                 horizontal: 70,
                 vertical: 10,
               ),
-              child: Buttom(
+              child: ButtonWidget(
                 title: "Atualizar",
                 ontap: () {},
               ),

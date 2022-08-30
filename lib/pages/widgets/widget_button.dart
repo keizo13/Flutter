@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class Buttom extends StatelessWidget {
+class ButtonWidget extends StatelessWidget {
   final String title;
   final VoidCallback? ontap;
-  const Buttom({
+  const ButtonWidget({
     Key? key,
     required this.title,
     this.ontap,

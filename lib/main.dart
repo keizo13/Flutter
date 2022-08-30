@@ -4,7 +4,6 @@ import 'package:incontre/pages/bottom_menu.dart';
 import 'package:incontre/pages/change_password.dart';
 import 'package:incontre/pages/config.dart';
 import 'package:incontre/pages/edit.dart';
-import 'package:incontre/pages/homepage.dart';
 import 'package:incontre/pages/login.dart';
 import 'package:incontre/pages/splash.dart';
 

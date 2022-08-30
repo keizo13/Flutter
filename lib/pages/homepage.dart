@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:incontre/pages/widgets/widget_divider.dart';
 import 'package:incontre/pages/widgets/widget_list.dart';
 
 class Homepage extends StatefulWidget {
@@ -67,10 +68,7 @@ class _HomepageState extends State<Homepage> {
               ),
             ),
           ),
-          Divider(
-            thickness: 1,
-            color: Colors.black.withOpacity(0.2),
-          ),
+          const DividerWidget(),
           const Padding(
             padding: EdgeInsets.all(25),
             child: Text(
@@ -88,10 +86,7 @@ class _HomepageState extends State<Homepage> {
             name: 'Antônio Chaves',
             email: 'antonio@email.com',
           ),
-          Divider(
-            thickness: 1,
-            color: Colors.black.withOpacity(0.2),
-          ),
+          const DividerWidget(),
         ],
       ),
     );

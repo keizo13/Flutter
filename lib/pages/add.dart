@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:incontre/pages/widgets/widget_buttom.dart';
+import 'package:incontre/pages/widgets/widget_button.dart';
 import 'package:incontre/pages/widgets/widget_appbar.dart';
 import 'package:incontre/pages/widgets/widget_input.dart';
 
@@ -9,7 +9,7 @@ class Add extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarEdit(
+      appBar: const AppBarWidget(
         title: "Adicionar",
       ),
       body: SingleChildScrollView(
@@ -37,7 +37,7 @@ class Add extends StatelessWidget {
                 horizontal: 70,
                 vertical: 200,
               ),
-              child: Buttom(
+              child: ButtonWidget(
                 title: 'Adicionar',
                 ontap: () {},
               ),
