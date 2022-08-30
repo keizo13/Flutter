@@ -5,6 +5,9 @@ class Input extends StatelessWidget {
   final IconData icon;
   final bool obscure;
   final Function(String)? onchanged;
+  final FormFieldValidator<String>? validate;
+  final GlobalKey<FormFieldState>? formFieldKey;
+  final String? errorText;
 
   const Input({
     Key? key,
@@ -12,15 +15,17 @@ class Input extends StatelessWidget {
     required this.icon,
     this.obscure = false,
     this.onchanged,
+    this.validate,
+    this.formFieldKey,
+    this.errorText,
   }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    //TextEditingController emailController = new TextEditingController();
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 40),
       child: TextFormField(
-        //controller: emailController,
+        validator: validate,
+        key: formFieldKey,
         obscureText: obscure,
         onChanged: onchanged,
         decoration: InputDecoration(
@@ -29,6 +34,7 @@ class Input extends StatelessWidget {
             icon,
           ),
           hintText: title,
+          errorText: errorText,
         ),
       ),
     );

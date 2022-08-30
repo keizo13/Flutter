@@ -2,10 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:incontre/pages/widgets/widget_button.dart';
 import 'package:incontre/pages/widgets/widget_appbar.dart';
 import 'package:incontre/pages/widgets/widget_input.dart';
+import 'package:incontre/utils/custom_dio.dart';
 
-class Add extends StatelessWidget {
+class Add extends StatefulWidget {
   const Add({Key? key}) : super(key: key);
 
+  @override
+  State<Add> createState() => _AddState();
+}
+
+class _AddState extends State<Add> {
+  var name = '';
+  var email = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

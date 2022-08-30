@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:incontre/pages/widgets/widget_input.dart';
 
@@ -13,6 +15,8 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   var email = "";
   var password = "";
+  String? errorText;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,12 +25,14 @@ class _LoginState extends State<Login> {
         child: InkWell(
           onTap: () async {
             final isLogged = await getHttp(email, password);
-            if (!mounted) {
+            if (isLogged == "sucesso") {
+              Navigator.pushNamed(context, '/home');
               return;
             }
-            if (isLogged) {
-              Navigator.pushNamed(context, '/home');
-            }
+            setState(() {
+              errorText = isLogged;
+            });
+            return;
           },
           child: const SizedBox(
             height: kToolbarHeight,
@@ -62,6 +68,12 @@ class _LoginState extends State<Login> {
               height: 100,
             ),
             Input(
+              validate: ((value) {
+                if (value == null || value.isEmpty) {
+                  return "This field is required";
+                }
+                return null;
+              }),
               title: "username",
               icon: Icons.person,
               onchanged: (value) {
@@ -69,11 +81,18 @@ class _LoginState extends State<Login> {
                   email = value;
                 });
               },
+              errorText: errorText,
             ),
             const SizedBox(
               height: 40,
             ),
             Input(
+              validate: ((value) {
+                if (value == null || value.isEmpty) {
+                  return "This field is required";
+                }
+                return null;
+              }),
               obscure: true,
               title: "senha",
               icon: Icons.lock,
