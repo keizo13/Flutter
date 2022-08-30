@@ -82,7 +82,7 @@ class _HomepageState extends State<Homepage> {
               ),
             ),
           ),
-          const UserList(
+          const User(
             name: 'Antônio Chaves',
             email: 'antonio@email.com',
           ),

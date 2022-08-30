@@ -1,27 +1,22 @@
 import 'package:dio/dio.dart';
 
-void getHttp() async {
+void getHttp(email, password) async {
   try {
-    var response = await Dio().get('http://localhost:3000/users');
+    var response = await Dio().post(
+      'http://localhost:3000/login',
+      data: {
+        "email": email,
+        "password": password,
+      },
+    );
     print(response);
   } catch (e) {
     print(e);
   }
 }
 
-//get request
-Response response;
-var dio = Dio();
-response = await dio.get('http://localhost:3000/users');
-print(response.data.toString());
-
-
-//post request
-response = await dio.post('/login', data: {'email': 12, 'password': 'wendu'});
-
-//send form data
-var formData = FormData.fromMap({
-  'name': 'wendux',
-  'age': 25,
-});
-var response = await dio.post('/info', data: formData);
+//void main() async {
+  //var dio = Dio();
+  //final response = await dio.get('http://localhost:3000/users');
+  //print(response.data);
+//}
