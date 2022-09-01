@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:incontre/pages/config.dart';
-import 'package:incontre/pages/homepage.dart';
+import 'package:inicio/pages/config.dart';
+import 'package:inicio/pages/homepage.dart';
 
 class BottomMenu extends StatefulWidget {
   const BottomMenu({Key? key}) : super(key: key);

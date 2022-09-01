@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:incontre/pages/widgets/widget_button.dart';
-import 'package:incontre/pages/widgets/widget_appbar.dart';
-import 'package:incontre/pages/widgets/widget_input.dart';
-import 'package:incontre/utils/custom_dio.dart';
+import 'package:inicio/pages/widgets/widget_button.dart';
+import 'package:inicio/pages/widgets/widget_appbar.dart';
+import 'package:inicio/pages/widgets/widget_input.dart';
+import 'package:inicio/utils/custom_dio.dart';
 
 class Add extends StatefulWidget {
   const Add({Key? key}) : super(key: key);

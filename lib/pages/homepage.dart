@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:incontre/pages/widgets/widget_divider.dart';
-import 'package:incontre/pages/widgets/widget_list.dart';
+import 'package:inicio/pages/widgets/widget_divider.dart';
+import 'package:inicio/pages/widgets/widget_list.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);

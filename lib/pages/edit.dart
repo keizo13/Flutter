@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:incontre/pages/widgets/widget_appbar.dart';
-import 'package:incontre/pages/widgets/widget_button.dart';
-import 'package:incontre/pages/widgets/widget_input.dart';
+import 'package:inicio/pages/widgets/widget_appbar.dart';
+import 'package:inicio/pages/widgets/widget_button.dart';
+import 'package:inicio/pages/widgets/widget_input.dart';
 
 class Edit extends StatelessWidget {
   const Edit({Key? key}) : super(key: key);

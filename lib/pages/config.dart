@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:incontre/pages/widgets/widget_appbar.dart';
-import 'package:incontre/pages/widgets/widget_divider.dart';
-import 'package:incontre/pages/widgets/widget_perfil.dart';
+import 'package:inicio/pages/widgets/widget_appbar.dart';
+import 'package:inicio/pages/widgets/widget_divider.dart';
+import 'package:inicio/pages/widgets/widget_perfil.dart';
 
 class Config extends StatelessWidget {
   const Config({Key? key}) : super(key: key);
