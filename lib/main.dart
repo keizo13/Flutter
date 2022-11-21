@@ -1,7 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:incontre/pages/add.dart';
+import 'package:incontre/pages/bottom_menu.dart';
+import 'package:incontre/pages/change_password.dart';
+import 'package:incontre/pages/config.dart';
+import 'package:incontre/pages/edit.dart';
+import 'package:incontre/pages/login.dart';
+import 'package:incontre/pages/splash.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MaterialApp(
+      title: 'routes',
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const Splash(),
+        '/home': (context) => const BottomMenu(),
+        '/login': (context) => const Login(),
+        '/edit': (context) => const Edit(),
+        '/config': (context) => const Config(),
+        '/password': (context) => const ChangePassword(),
+        '/add': (context) => const Add(),
+      },
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -9,91 +30,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Login(),
-    );
-  }
-}
-
-class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: Material(
-        color: Color(0xff0062C8),
-        child: InkWell(
-          onTap: () {},
-          child: const SizedBox(
-            height: kToolbarHeight,
-            width: double.infinity,
-            child: Center(
-              child: Text(
-                'ENTRAR',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 14,
-                ),
-              ),
-            ),
-          ),
-        ),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            const Image(
-              width: 1000,
-              height: 300,
-              image: AssetImage('assets/images/login.png'),
-              fit: BoxFit.fill,
-            ),
-            const SizedBox(
-              height: 100,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  prefixIcon: Icon(
-                    color: Color(0xff0062C8),
-                    Icons.account_circle,
-                  ),
-                  hintText: 'senha',
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  prefixIcon: Icon(
-                    color: Color(0xff0062C8),
-                    Icons.lock,
-                  ),
-                  hintText: 'senha',
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            const Text(
-              "Esqueci a senha",
-              style: TextStyle(
-                color: Color(0xff7C8B99),
-              ),
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-          ],
-        ),
-      ),
+      home: Splash(),
     );
   }
 }
